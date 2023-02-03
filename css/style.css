@@ -67,7 +67,6 @@ main {
 
 @media (max-width: 620px) {
     main {
-        top: 40%;
         width: 90%;
         padding: 0 0.5rem;
     }
@@ -81,7 +80,13 @@ main {
     }
 }
 
-@media (min-width: 320px) and (max-width: 370px) {
+@media (min-width: 320px) and (max-width: 425px) {
+    body {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 180px;
+    }
+
     .img-line-mobile {
         width: 90%;
     }
