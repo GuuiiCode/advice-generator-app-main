@@ -67,9 +67,7 @@ main {
 
 @media (max-width: 620px) {
     body {
-        display: flex;
-        align-items: flex-start;
-        margin-top: 150px;
+        min-height: 100vw;
     }
 
     main {
