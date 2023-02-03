@@ -14,9 +14,11 @@ body {
     font-family: 'Manrope', sans-serif;
     font-size: var(--font-size);
     background-color: var(--dark-blue);
-    position: relative;
     min-height: 98vh;
     font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
@@ -27,10 +29,6 @@ main {
     background-color: var(--dark-grayish-blue);
     width: 500px;
     padding: 0 1.5rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .number-device {
@@ -80,5 +78,11 @@ main {
 
     .img-line-desktop {
         display: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 370px) {
+    .img-line-mobile {
+        width: 90%;
     }
 }
