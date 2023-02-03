@@ -66,6 +66,10 @@ main {
 }
 
 @media (max-width: 620px) {
+    body {
+        min-height: calc(100vw - (-90vw));
+    }
+
     main {
         width: 90%;
         padding: 0 0.5rem;
