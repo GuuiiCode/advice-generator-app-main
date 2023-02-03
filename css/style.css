@@ -67,7 +67,7 @@ main {
 
 @media (max-width: 620px) {
     body {
-        min-height: calc(100vw - (-90vw));
+        min-height: calc(100vw - 5vw);
     }
 
     main {
