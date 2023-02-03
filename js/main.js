@@ -9,7 +9,7 @@ btnAdviceGenerator.addEventListener('click', () => {
 });
 
 function generateAdvice() {
-    fetch('https://api.adviceslip.com/advice')
+    fetch('https://api.adviceslip.com/advice', { cache: 'no-store' })
         .then((response) => {
             if (!response.ok) {
                 throw new Error(`HTTP error: ${response.status}`);
@@ -21,10 +21,8 @@ function generateAdvice() {
 }
 
 function initialize(advice) {
-
     numberDevice.innerHTML = `Advice #${advice.slip.id}`;
     phrases.innerHTML = `&ldquo;${advice.slip.advice}&rdquo;`;
-    console.log(advice);
 }
 
 generateAdvice();
