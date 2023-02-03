@@ -4,16 +4,19 @@
     --grayish-blue: hsl(217, 19%, 38%);
     --dark-grayish-blue: hsl(217, 19%, 24%);
     --dark-blue: hsl(218, 23%, 16%);
+
+    --font-size: 28px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
 
 body {
-    display: flex;
-    justify-content: center;
-    font-size: 28px;
     font-family: 'Manrope', sans-serif;
+    font-size: var(--font-size);
     background-color: var(--dark-blue);
+    position: relative;
+    min-height: 98vh;
+    font-weight: 600;
 }
 
 main {
@@ -22,29 +25,41 @@ main {
     flex-direction: column;
     border-radius: 10px;
     background-color: var(--dark-grayish-blue);
-    max-width: 90vw;
-    padding: 0 20px 50px;
+    width: 500px;
+    padding: 0 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-h6 {
+.number-device {
     text-transform: uppercase;
     color: var(--neon-green);
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin: 45px 0 0 0;
 }
 
 .phrases {
     color: var(--light-cyan);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.img-line-mobile {
+    display: none;
 }
 
 .btn-advice-generator {
-    width: 50px;
-    height: 50px;
-    ;
+    width: 60px;
+    height: 60px;
     background-color: var(--neon-green);
     border-radius: 50%;
-    /* font-size: 28px; */
     border: none;
     outline: none;
-    /* opacity: 0.7; */
+    position: relative;
+    top: 30px;
 }
 
 .btn-advice-generator:hover {
@@ -52,6 +67,18 @@ h6 {
     box-shadow: 0px 0px 15px 5px var(--neon-green);
 }
 
-.fa-dice-five {
-    font-size: 20px;
+@media (max-width: 620px) {
+    main {
+        top: 40%;
+        width: 90%;
+        padding: 0 0.5rem;
+    }
+
+    .img-line-mobile {
+        display: block;
+    }
+
+    .img-line-desktop {
+        display: none;
+    }
 }

@@ -1,4 +1,4 @@
-const numberDevice = document.querySelector('h6');
+const numberDevice = document.querySelector('.number-device');
 
 const phrases = document.querySelector('.phrases');
 
@@ -23,7 +23,7 @@ function generateAdvice() {
 function initialize(advice) {
 
     numberDevice.innerHTML = `Advice #${advice.slip.id}`;
-    phrases.innerHTML = advice.slip.advice;
+    phrases.innerHTML = `&ldquo;${advice.slip.advice}&rdquo;`;
     console.log(advice);
 }
 
